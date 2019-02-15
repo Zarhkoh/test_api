@@ -25,3 +25,6 @@ php console ma:mi
 ```
 php console do:mi:mi
 ```
+
+
+if you want random datas, you can import the "ecf_api.sql.zip" to your db.
