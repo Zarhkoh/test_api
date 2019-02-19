@@ -14,7 +14,7 @@ security:
         in_memory: { memory: ~ }
         in_database:
             entity:
-                class: App\Entity\Users
+                class: App\Entity\User
                 property: email
         # used to reload user from session & other features (e.g. switch_user)
         app_user_provider:
@@ -42,5 +42,5 @@ security:
                 path: security_logout
                 target: security_login
     access_control:
-         - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/admin, roles: IS_AUTHENTICATED_FULLY }
         # - { path: ^/profile, roles: ROLE_USER }
