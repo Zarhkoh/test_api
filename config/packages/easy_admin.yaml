@@ -20,10 +20,14 @@ easy_admin:
         Resource:
             class: App\Entity\Resource
             list:
-                fields: ['soft', 'alcohol', 'food', { property: 'students', label: 'Student firstname' }]
+                fields:
+                    - 'soft'
+                    - 'alcohol'
+                    - 'food'
+                    - 'student_resource'
             form:
                 fields:
                     - 'soft'
                     - 'alcohol'
                     - 'food'
-                    - { property: 'students', type: 'entity', type_options: { choice_label: 'Firstname', multiple: true }}
+                    - { property: 'student_resource' }
