@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Users;
+use App\Entity\User;
 use App\Form\UsersType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -20,7 +20,7 @@ class SecurityController extends AbstractController
     public function register(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder)
     {
         /* Déclaration des variable */
-        $user = new Users();
+        $user = new User();
 
       
 
@@ -45,7 +45,7 @@ class SecurityController extends AbstractController
     }
 
     /**
-     * @Route("/connexion", name="security_login")
+     * @Route("/login", name="security_login")
      */
     public function login(){
         return $this->render('security/login.html.twig');
